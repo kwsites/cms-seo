@@ -1,7 +1,7 @@
 {
   "name": "@kwsites/cms-seo",
   "description": "SEO enhancements for apostrophe cms",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "author": "Steve King <steve@mydev.co>",
   "contributors": [
