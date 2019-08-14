@@ -19,8 +19,5 @@
     "lib/**/*.*"
   ],
   "license": "MIT",
-  "repository": "git://github.com/kwsites/cms-seo.git",
-  "peerDependencies": {
-    "lodash": "^4"
-  }
+  "repository": "git://github.com/kwsites/cms-seo.git"
 }
