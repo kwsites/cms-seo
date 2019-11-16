@@ -19,5 +19,6 @@
     "lib/**/*.*"
   ],
   "license": "MIT",
+  "keywords": ["apostrophe", "apostrophecms", "cms", "seo"],
   "repository": "git://github.com/kwsites/cms-seo.git"
 }
