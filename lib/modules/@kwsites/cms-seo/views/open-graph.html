@@ -1,0 +1,46 @@
+{#
+
+TODO: OpenGraph also supports locations
+
+<meta property="og:latitude" content="40.7207559"/>
+<meta property="og:longitude" content="-74.00076130000002"/>
+
+#}
+
+{%- set item = data.piece or data.page -%}
+{%- set image = apos.images.first(item.thumbnail or item) %}
+{%- set ogSite = apos.seo.options.site -%}
+{%- set ogTwitter = apos.seo.options.twitter -%}
+
+<meta property="og:site_name" content="{{ ogSite }}"/>
+<meta property="og:title" content="
+   {%- block ogTitlePrefix -%}
+      {{ ogSite }} -
+   {%- endblock -%}
+   {%- block ogTitle -%}
+      {%- if item %} {{ item.title }} {%- endif -%}
+   {%- endblock -%}
+"/>
+
+{%- if item %}
+<meta property="og:url" content="{{ item._url }}"/>
+<meta property="og:type" content="{{ item.type | og_type }}"/>
+{%- if item.publishedAt %}
+<meta property="article:published_time" content="{{ item.publishedAt | date }}" />
+{%- endif -%}
+{%- endif -%}
+
+{%- if image -%}
+{%- block image %}
+<meta property="og:image" content="{{ apos.attachments.url(image) }}"/>
+<meta property="og:image:width" content="{{ image.width }}"/>
+<meta property="og:image:height" content="{{ image.height }}"/>
+{%- endblock -%}
+{%- endif %}
+
+{%- if ogTwitter %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ ogTwitter }}" />
+<meta name="twitter:creator" content="{{ ogTwitter }}" />
+{%- endif %}
+

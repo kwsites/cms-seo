@@ -1,0 +1,11 @@
+{%- if data.piece %}
+<link rel="canonical" href="{{ data.piece._url }}">
+{%- endif -%}
+
+{%- if data.next %}
+<link rel="prev" href="{{ data.next._url }}">
+{%- endif -%}
+
+{%- if data.previous %}
+<link rel="next" href="{{ data.previous._url }}">
+{%- endif -%}

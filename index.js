@@ -7,6 +7,7 @@ module.exports = {
          'seo-groups',
          'seo-images',
          'seo-users',
+         '@kwsites/cms-seo',
       ],
       directory: 'lib/modules'
    }

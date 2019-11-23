@@ -1,0 +1,7 @@
+{#
+   Include any configured meta section
+#}
+{%- for template in apos.seo.metaTemplates() -%}
+   {%- include template -%}
+{%- endfor -%}
+
