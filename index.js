@@ -4,6 +4,7 @@ module.exports = {
       modules: [
          'seo-doc-type-manager',
          'seo-files',
+         'seo-global',
          'seo-groups',
          'seo-images',
          'seo-users',
